@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Depot</title>
+  <title>Pragprog Books Online Store</title>
   <%= stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+	<div id="store">
+		<div id="banner">
+			<%= image_tag("logo.jpg") %>
+			<%= @page_title || "Pragmatic Bookshelf" %>
+		</div>
+		<div id="columns">
+			<div id="side">
+				<a href="http://www....">Home</a><br />
+				<a href="http://www..../frag">Home</a><br />
+				<a href="http://www..../news">Home</a><br />
+				<a href="http://www..../contact">Home</a><br />
+			</div>
+			<div id="main">
+				<%= yield %>
+			</div>
+		</div>
 </body>
 </html>
